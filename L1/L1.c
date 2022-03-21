@@ -7,7 +7,7 @@ int main() {
 
     puts(
         "Zadacha №11, Krylov Artem Vyacheslavovich, IKPI-14\n"
-        "(2 * d - 96 * a) / (34 / b - a + 1)");
+        "(2 * d - 96 / a) / (34 / b - a + 1)");
 
     void (*arr[])() = {f_ch, f_uch, f_shrt, f_ushrt};
 
