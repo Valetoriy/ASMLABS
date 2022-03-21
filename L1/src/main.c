@@ -16,8 +16,8 @@ int main() {
             "Viberite tip dannih:\n"
             "    1) Signed char\n"
             "    2) Unsigned char\n"
-            "    3) Int\n"
-            "    4) Unsigned int\n"
+            "    3) Short\n"
+            "    4) Unsigned short\n"
             "Dlya zaversheniya raboti vvetide 0");
         scanf("%d", &n);
         if (n) arr[n - 1]();
