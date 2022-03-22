@@ -15,6 +15,16 @@ extern unsigned short f_ushrt_asm();
 void f_shrt() {
     puts("Vvedite zhacheniya a, b: [-32,768; 32,767]");
     scanf("%hi%hi", &a_shrt, &b_shrt);
+    if (a_shrt < b_shrt) {
+        if (b_shrt < -181 || b_shrt > 181) {
+            puts("Ne podhodyasheye zhacneniye b");
+            return;
+        }
+    } else if (a_shrt > b_shrt)
+        if (a_shrt + b_shrt > 32767 || a_shrt + b_shrt < -32768) {
+            puts("Ne podhodyashiye zhacneniya a i b");
+            return;
+        }
 
     printf("ASM: %hi\n", f_shrt_asm());
 
@@ -31,7 +41,16 @@ void f_shrt() {
 void f_ushrt() {
     puts("Vvedite zhacheniya a, b: [0; 65,535]");
     scanf("%hu%hu", &a_ushrt, &b_ushrt);
-
+    if (a_shrt < b_shrt) {
+        if (b_shrt > 254) {
+            puts("Ne podhodyasheye zhacneniye b");
+            return;
+        }
+    } else if (a_shrt > b_shrt)
+        if (a_shrt + b_shrt > 65535) {
+            puts("Ne podhodyashiye zhacneniya a i b");
+            return;
+        }
     printf("ASM: %hu\n", f_ushrt_asm());
 
     unsigned short res;
