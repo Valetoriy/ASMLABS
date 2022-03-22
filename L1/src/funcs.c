@@ -5,7 +5,7 @@
 // (2 * d - 96 / a) / (34 / b - a + 1)
 // numerator, denominator, res
 
-char num_ch, den_ch, res_ch, a_ch, b_ch, d_ch;
+signed char num_ch, den_ch, res_ch, a_ch, b_ch, d_ch;
 unsigned char num_uch, den_uch, res_uch, a_uch, b_uch, d_uch;
 short num_shrt, den_shrt, res_shrt, a_shrt, b_shrt, d_shrt;
 unsigned short num_ushrt, den_ushrt, res_ushrt, a_ushrt, b_ushrt, d_ushrt;
@@ -27,7 +27,7 @@ void f_ch() {
     den_ch = 34 / b_ch - a_ch + 1;
     res_ch = num_ch / den_ch;
     printf("Num = %hhd, den = %hhd, res = %hhd\n", num_ch, den_ch, res_ch);
-};
+}
 
 void f_uch() {
     puts("Vvedite zhacheniya a, b i d: [0; 255]");
@@ -42,7 +42,7 @@ void f_uch() {
     den_uch = 34 / b_uch - a_uch + 1;
     res_uch = num_uch / den_uch;
     printf("Num = %hhu, den = %hhu, res = %hhu\n", num_uch, den_uch, res_uch);
-};
+}
 
 void f_shrt() {
     puts("Vvedite zhacheniya a, b i d: [-32,768; 32,767]");
@@ -57,7 +57,7 @@ void f_shrt() {
     den_shrt = 34 / b_shrt - a_shrt + 1;
     res_shrt = num_shrt / den_shrt;
     printf("Num = %hi, den = %hi, res = %hi\n", num_shrt, den_shrt, res_shrt);
-};
+}
 
 void f_ushrt() {
     puts("Vvedite zhacheniya a, b i d: [0; 65,535]");
@@ -72,4 +72,4 @@ void f_ushrt() {
     den_ushrt = 34 / b_ushrt - a_ushrt + 1;
     res_ushrt = num_ushrt / den_ushrt;
     printf("Num = %hu, den = %hu, res = %hu\n", num_ushrt, den_ushrt, res_ushrt);
-};
+}

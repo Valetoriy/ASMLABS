@@ -1,5 +1,4 @@
 # common
-# P.S. turning on optimizations messes up the output
 C = gcc -Wall -Wextra -Wpedantic -fsanitize=address,undefined
 # compile-only args
 CO = -c
@@ -9,7 +8,7 @@ O = obj/
 
 OBJS = $(O)main.o $(O)funcs.o $(O)afuncs.o
 all: $(OBJS)
-	$(C) $(OBJS) -fno-pie -no-pie -o L1
+	$(C) $(OBJS) -fno-pie -no-pie -o L3
 
 $(O)main.o: $(S)main.c
 	$(C) $(CO) $(S)main.c -o $(O)main.o
@@ -21,4 +20,4 @@ $(O)afuncs.o: $(S)afuncs.asm
 	yasm -f elf64 $(S)afuncs.asm -o $(O)afuncs.o
 
 clean:
-	rm $(O)*.o && rm L1
+	rm $(O)*.o && rm L3
