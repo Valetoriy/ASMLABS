@@ -41,13 +41,13 @@ void f_shrt() {
 void f_ushrt() {
     puts("Vvedite zhacheniya a, b: [0; 65,535]");
     scanf("%hu%hu", &a_ushrt, &b_ushrt);
-    if (a_shrt < b_shrt) {
-        if (b_shrt > 254) {
+    if (a_ushrt < b_ushrt) {
+        if (b_ushrt > 254) {
             puts("Ne podhodyasheye zhacneniye b");
             return;
         }
-    } else if (a_shrt > b_shrt)
-        if (a_shrt + b_shrt > 65535) {
+    } else if (a_ushrt > b_ushrt)
+        if (a_ushrt + b_ushrt > 65535) {
             puts("Ne podhodyashiye zhacneniya a i b");
             return;
         }

@@ -38,14 +38,16 @@ f_shrt_asm:
     ret
 
 f_ushrt_asm:
-    mov bx, [a_ushrt]
-    cmp bx, [b_ushrt]
+    xor eax, eax
+    xor ebx, ebx
+    mov ax, [a_ushrt]
+    mov bx, [b_ushrt]
+    cmp eax, ebx
     jg ushg
     je ushe
 
     ; a < b
     mov ax, [b_ushrt]
-    mov bx, [b_ushrt]
     mul bx ; b * b
     mov bx, 8
     xor dx, dx
@@ -53,8 +55,7 @@ f_ushrt_asm:
     jmp ushf
 
     ushg: ; a > b
-    mov ax, [a_ushrt]
-    add ax, [b_ushrt] ; b + a
+    add eax, ebx ; b + a
     mov bx, [a_ushrt]
     dec bx ; a - 1
     xor dx, dx
