@@ -4,9 +4,6 @@ float num, den, res;
 float a, b;
 int d;
 
-// (2 * d - 96 / a) / (34 / b - a + 1)
-// a, b - float [1.2E-38; 3.4E+38], d - int [-2,147,483,648; 2,147,483,647]
-
 extern void afunc();
 
 int main() {
@@ -28,5 +25,6 @@ int main() {
     den = 34 / b - a + 1;
     res = num / den;
     printf("Num = %.1f, den = %.1f, res = %.1f\n", num, den, res);
+
     return 0;
 }
