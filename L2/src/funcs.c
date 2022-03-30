@@ -2,10 +2,6 @@
 
 #include <stdio.h>
 
-// (b + a) / (a - 1), if a > b
-// 23, if a = b
-// b * b / 8, if a < b
-
 short a_shrt, b_shrt;
 unsigned short a_ushrt, b_ushrt;
 
